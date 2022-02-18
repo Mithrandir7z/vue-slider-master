@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Slider</title>
+</head>
+<body>
+    
+
+    <div id="root">
+        <!--Slider container-->
+        <div class="slider-container">
+            <!-- Slider carousel -->
+            <div class="slider-carousel">
+                <div class="arrow" @click="prevPhoto">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+
+                <div class="images">
+                    <img :src="carouselImages[currentActiveImage]" alt="carousel">
+                </div>
+
+                <div class="arrow" @click="nextPhoto()">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <!-- End Slider carousel -->
+
+            <div class="circles">
+                <span v-for="(image, index) in carouselImages" class="circle" 
+                :class="{ 'active' : index == currentActiveImage }">
+                
+                    <i class="fas fa-circle"></i>
+                </span>
+            </div>
+        </div>
+        <!--End Slider container-->
+    </div>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

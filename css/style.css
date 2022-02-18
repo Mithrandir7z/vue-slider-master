@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.slider-container {
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.slider-carousel {
+    display: flex;
+    align-items: center;
+}
+
+.slider-carousel .images {
+    padding: 0 5%;
+}
+
+.slider-carousel .arrow {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 999px;
+}
+
+.circle {
+    color: white;
+    margin: 0 10px;
+}
+
+.circle.active {
+    color: blue;
+}
